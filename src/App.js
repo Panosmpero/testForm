@@ -42,7 +42,6 @@ function App() {
               Message: <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
             </label>
           </p>
-          <div data-netlify-recaptcha="true"></div>
           <p>
             <button type="submit">Send</button>
           </p>
