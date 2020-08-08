@@ -5,7 +5,7 @@ function App() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  
+
   const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -42,6 +42,7 @@ function App() {
               Message: <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
             </label>
           </p>
+          <div data-netlify-recaptcha="true"></div>
           <p>
             <button type="submit">Send</button>
           </p>
