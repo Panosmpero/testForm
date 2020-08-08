@@ -5,20 +5,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form action="POST" data-netlify="true">
+        <ul>
+          <li><input type="text" name="name" placeholder="Name"/></li>
+          <li><input type="email" name="email" placeholder="email"/></li>
+          <li><textarea type="message" name="message" placeholder="Message"/></li>
+        </ul>
+        <div data-netlify-recaptcha="true"></div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
