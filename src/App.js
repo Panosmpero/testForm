@@ -4,14 +4,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <form action="POST" data-netlify="true">
-        <ul>
-          <li><input type="text" name="name" placeholder="Name"/></li>
-          <li><input type="email" name="email" placeholder="email"/></li>
-          <li><textarea type="message" name="message" placeholder="Message"/></li>
-        </ul>
+      <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+        <p>
+          <label>Email: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
         <div data-netlify-recaptcha="true"></div>
-        <button type="submit">Submit</button>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
     </div>
   );
